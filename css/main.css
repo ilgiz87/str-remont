@@ -1,0 +1,27 @@
+img {
+  max-width: 100%;
+}
+
+.header-top {
+  background-color: #fff;
+}
+.header__logo {
+  max-width: 250px;
+}
+.header__contacts-list {
+  margin-bottom: 0;
+}
+.header__contacts-list a {
+  font-size: 20px;
+  font-weight: 600;
+  color: #212529;
+  text-decoration: none;
+}
+.header__contacts-list .callback a {
+  font-size: 14px;
+  -webkit-text-decoration: 1px dashed;
+          text-decoration: 1px dashed;
+}
+.header-bottom {
+  background-color: blueviolet;
+}/*# sourceMappingURL=main.css.map */
