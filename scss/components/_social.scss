@@ -1,0 +1,27 @@
+.social {
+    &__link {
+        width: toRem(40);
+        aspect-ratio: 1;
+
+        color: #fefefe;
+        align-items: center;
+        justify-content: center;
+
+        &--vk {
+            background-color: #0077FF;
+        }
+
+        &--wa {
+            background-color: #25d366;
+        }
+
+        &--tg {
+            background-color: #24A1DE;
+        }
+
+        svg {
+            height: toRem(20);
+            width: auto;
+        }
+    }
+}
