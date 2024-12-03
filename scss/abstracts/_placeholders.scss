@@ -1,3 +1,23 @@
+
+
+// Нормализация блочной модели
+%box-sizing {
+  box-sizing: border-box;
+}
+
+// Плавный скролл
+%scroll-behavior {
+  scroll-behavior: smooth;
+}
+
+
+//  Упрощаем работу с изображениями
+%img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 %margin-block-0 {
   margin-block: 0;
 }

@@ -1,30 +1,5 @@
-:root {
-  --body-text-color: #121212;
-  --body-bg-color: #fefefe;
-  --body-font-family: "Onest", sans-serif;
-  --body-font-weight: 400;
-  --body-font-size: 1rem;
-  --body-line-height: 1.5;
-  --heading-font-family: "Druk-Cyr", sans-serif;
-  --heading-font-weight: 900;
-  --heading-line-height: 1.2;
-  --h1-font-size: clamp(2.5rem, 1.667rem + 3.71vw, 5rem);
-  --h2-font-size: clamp(1.5rem, 1rem + 2.23vw, 3rem);
-  --h3-font-size: clamp(1.125rem, 1rem + 0.56vw, 1.5rem);
-  --h4-font-size: 1.5rem;
-  --h5-font-size: 1.25rem;
-  --h6-font-size: 1rem;
-}
-
-:where(p,
-ul,
-ol,
-dl):where([class]), :where(blockquote, figure):where([class]), p, body {
-  margin-block: 0;
-}
-
-:where(blockquote, figure):where([class]), body {
-  margin-inline: 0;
+body, html {
+  box-sizing: border-box;
 }
 
 :has(:target), html {
@@ -38,10 +13,30 @@ video {
   height: auto;
 }
 
-html,
-body {
-  min-height: 100%;
-  box-sizing: border-box;
+:where(p, h1, h2, h3, h4, h5, h6 ul, ol, dl, blockquote, figure):where([class]), p, body {
+  margin-block: 0;
+}
+
+:where(blockquote, figure):where([class]), body {
+  margin-inline: 0;
+}
+
+:root {
+  --body-text-color: #121212;
+  --body-bg-color: #fefefe;
+  --body-font-family: Onest, sans-serif;
+  --body-font-weight: 400;
+  --body-font-size: 1rem;
+  --body-line-height: 1.5;
+  --heading-font-family: Druk-Cyr, sans-serif;
+  --heading-font-weight: 900;
+  --heading-line-height: 1.2;
+  --h1-font-size: clamp(2.5rem, 1.667rem + 3.71vw, 5rem);
+  --h2-font-size: clamp(1.75rem, 1.334rem + 1.86vw, 3rem);
+  --h3-font-size: clamp(1.125rem, 1rem + 0.56vw, 1.5rem);
+  --h4-font-size: clamp(1.125rem, 1.084rem + 0.19vw, 1.25rem);
+  --h5-font-size: clamp(1rem, 0.959rem + 0.19vw, 1.125rem);
+  --h6-font-size: 1rem;
 }
 
 *,
@@ -49,12 +44,24 @@ body {
 *::after {
   box-sizing: inherit;
 }
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 
 html {
+  min-height: 100%;
   scrollbar-gutter: stable;
 }
 
 body {
+  height: 100%;
   background-color: var(--body-bg-color);
   color: var(--body-text-color);
   font-family: var(--body-font-family);
@@ -67,9 +74,6 @@ h6, h5, h4, h3, h2, h1 {
   font-family: var(--heading-font-family);
   font-weight: var(--heading-font-weight);
   line-height: var(--heading-line-height);
-}
-:where(h6, h5, h4, h3, h2, h1):where([class]) {
-  margin-block: 0;
 }
 
 h1 {
@@ -156,16 +160,6 @@ label {
   border-color: currentColor;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  *,
-  ::before,
-  ::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
 /*  buttons */
 .social__link {
   width: 2.5rem;

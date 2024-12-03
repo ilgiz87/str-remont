@@ -7,32 +7,37 @@ $VIEWPORT-MIN: 360;
 
 // Внешний отступ вниз для параграфа без атрибута class,
 // который расположен не последним среди своих соседних элементов 
-$PARAGRAPH_MARGIN_BOTTOM: toRem(24);
+$PARAGRAPH_MARGIN_BOTTOM: 24;
 
+// Базовые настройки для normalize.scss
+$body-text-color: #121212;
+$body-bg-color: #fefefe;
+$body-font-family: "Onest", sans-serif;
+$body-font-size: $BASE_FONT_SIZE; //16px
+$body-font-weight: 400;
+$body-line-height: 1.5;
 
-%normalize-root {
+// Общие стили для всех заголовков
+$heading-font-family: 'Druk-Cyr', sans-serif;
+$heading-font-weight: 900;
+$heading-line-height: 1.2;
 
-  --body-text-color: #121212;
-  --body-bg-color: #fefefe;
-  --body-font-family: 'Onest', sans-serif;
-  --body-font-weight: 400;
-  --body-font-size: #{toRem(16)};
-  --body-line-height: 1.5;
+// Размеры заголовков h1-h6
+$h1-fs-max: 80;
+$h1-fs-min: 40;
 
-  // Общие стили для всех заголовков
-  --heading-font-family: 'Druk-Cyr', sans-serif;
-  --heading-font-weight: 900;
-  --heading-line-height: 1.2;
+$h2-fs-max: 48;
+$h2-fs-min: 28;
 
-  // Размеры заголовков h1-h6
-  --h1-font-size: #{clamp1(40, 80)};
-  --h2-font-size: #{clamp1(24, 48)};
-  --h3-font-size: #{clamp1(18, 24)};
-  --h4-font-size: #{toRem(24)};
-  --h5-font-size: #{toRem(20)};
-  --h6-font-size: #{toRem(16)};
-}
+$h3-fs-max: 24;
+$h3-fs-min: 18;
 
-:root {
-  @extend %normalize-root
-}
+$h4-fs-max: 20;
+$h4-fs-min: 18;
+
+$h5-fs-max: 18;
+$h5-fs-min: 16;
+
+$h6-fs-max: 16;
+$h6-fs-min: 16;
+
